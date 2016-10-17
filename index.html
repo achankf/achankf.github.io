@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta
+    name="description"
+    content="This is Alfred Chan's website. You can download my resume at https://goo.gl/KISIGF."
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alfred's Website</title>
+
+  <style>
+    article {
+      min-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: serif;
+      hyphens: auto;
+      word-wrap: break-word;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    li {
+      padding-block: 0.5rem;
+    }
+
+    #logo {
+      max-width: 50px;
+      max-height: 50px;
+      min-width: 50px;
+      min-height: 50px;
+    }
+
+    div.date {
+      font-family: "Open Sans", sans-serif;
+      color: rgb(110, 110, 110);
+      font-size: 0.8em;
+    }
+
+    div.container {
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      display: grid;
+      grid-template-rows: 50px auto;
+      grid-template-columns: auto;
+    }
+
+    nav.menu {
+      overflow: hidden;
+      text-align: center;
+      border-bottom: 1px solid rgb(200, 200, 200);
+      border-right: 0px;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      grid-column: auto;
+      grid-row: 1;
+    }
+
+    nav.menu a {
+      text-decoration: none;
+      font-weight: bold;
+      padding-bottom: 0;
+      padding-right: 1em;
+      font-size: 1em;
+    }
+
+    div.contents {
+      padding: 0;
+      margin: 0;
+      overflow: auto;
+      grid-column: auto;
+      grid-row: 2;
+      scroll-behavior: smooth;
+    }
+
+    div.contents > article:nth-child(even) {
+      background: #f8f8f8;
+    }
+
+    @media screen and (min-width: 480px) {
+      div.container {
+        grid-template-rows: 100vh;
+        grid-template-columns: 160px auto;
+      }
+
+      div.contents {
+        grid-column: 2;
+        grid-row: auto;
+      }
+
+      nav.menu {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0px;
+        border-right: 1px solid rgb(200, 200, 200);
+        grid-column: 1;
+        grid-row: auto;
+      }
+
+      nav.menu a {
+        padding-right: 0;
+        padding-bottom: 1em;
+        font-size: 1.5em;
+      }
+
+      #logo {
+        max-width: 150px;
+        max-height: 150px;
+        min-width: 150px;
+        min-height: 150px;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <nav class="menu">
+      <div id="logo">
+        <picture>
+          <source srcset="img/logo_small.png" media="(max-width: 480px)" />
+          <source srcset="img/logo.png" />
+          <img src="img/logo_small.png" alt="https://goo.gl/KISIGF" />
+        </picture>
+      </div>
+      <a href="#me">Me</a>
+      <a href="#fun">Fun</a>
+    </nav>
+    <div class="contents">
+      <article id="me">
+        <h1>About Me</h1>
+
+        <p>
+          I am Alfred Chan, a seasoned software engineer by profession. Outside
+          of my work, I dedicate my leisure time to pursue my passion for game
+          development as an enthusiastic hobbyist.
+        </p>
+
+        <p>
+          Throughout my academic journey at the University of Waterloo, where I
+          pursued a Bachelor's degree in Computer Science, I honed my
+          professional programming skills by engaging in various Co-Op jobs.
+          Among the courses I undertook, the introductory class on Type systems
+          and functional programming left a lasting impression on me, instilling
+          the belief that prioritizing correctness verifiable by computers is
+          paramount.
+        </p>
+      </article>
+
+      <article id="fun">
+        <h1>Fun Projects</h1>
+        This is a list of projects that I have made.
+        <ul>
+          <li>
+            <b>Space Industrialist (mini-game)</b>[
+            <a href="./space-industrialist" rel="noopener" target="_blank"
+              >Game</a
+            >
+            <a
+              href="https://github.com/achankf/space-industrialist"
+              rel="noopener"
+              target="_blank"
+              >Github</a
+            >
+            ]
+            <p>
+              Developed a personal pet project showcasing my skills in game
+              development, focusing on a space-themed logistics game. Players
+              assume the role of a CEO in charge of a galactic corporation, with
+              the objective of maximizing profit by strategically constructing
+              efficient production chains and exploring untapped markets on
+              uninhabited planets. Implemented the game logic using
+              <code>Typescript</code>, while leveraging <code>React</code> and
+              <code>HTML Canvas</code> for the engaging presentation layer.
+            </p>
+          </li>
+          <li>
+            <b>Simple RPC server &amp; client</b> [
+            <a
+              href="https://github.com/achankf/CS454/tree/master/a3"
+              rel="noopener"
+              target="_blank"
+              >Github</a
+            >
+            <a
+              href="https://github.com/achankf/CS454/blob/master/a3/a3.pdf"
+              rel="noopener"
+              target="_blank"
+              >Description</a
+            >
+            <a href="doc/rpc_doc.pdf" rel="noopener" target="_blank"
+              >Document</a
+            >
+            ]
+            <p>
+              This <code>C++</code> project is developed as part of a
+              distribution system course, offering developers the ability to
+              establish personalized functions on their server, allowing users
+              to execute these functions in the "cloud" environment. The project
+              consists of three major components:
+            </p>
+            <ul>
+              <li>
+                Coordinator Server: This server acts as a crucial gateway
+                between other servers and clients. Its primary role is to
+                provide clients with namespace resolution for other servers.
+                Additionally, it serves as a worker server for computation
+                purposes.
+              </li>
+              <li>
+                Worker Servers: These servers are responsible for providing
+                cloud computing capabilities to clients. They maintain an
+                internal namespace directory that gets regularly updated when
+                they communicate with the coordinator.
+              </li>
+              <li>
+                Client Application: The user interacts with this client
+                application to request cloud computation and obtain the results.
+                The client also maintains its name directory and synchronizes it
+                with a worker server during successful communication. This
+                allows for local name lookup, reducing the coordinator's
+                workload.
+              </li>
+            </ul>
+            <p>
+              <i>
+                Note: This project needs to be compiled and run in a
+                <code>Linux</code> environment.
+              </i>
+            </p>
+          </li>
+
+          <li>
+            <b>Direct UI Manipulation Game: Doozer Simulator</b> [
+            <a
+              href="https://github.com/achankf/CS349/tree/master/A2/doozerSimulator"
+              rel="noopener"
+              target="_blank"
+              >Github</a
+            >
+            <a
+              href="https://cs.uwaterloo.ca/~lank/CS349/W13/assignments/Assignment2.htm"
+              rel="noopener"
+              target="_blank"
+              >Description</a
+            >
+            <a
+              href="https://github.com/achankf/CS349/blob/master/A2/README.txt"
+              rel="noopener"
+              target="_blank"
+              >Readme</a
+            >
+            ]
+            <p>
+              Presented here is a compact <code>Java</code> game project where
+              the player takes control of a bulldozer equipped with a magnetic
+              tip. The objective is to capture as many candies falling from the
+              sky as possible, akin to a drag-n-drop Tetris-style experience.
+            </p>
+            <picture>
+              <source
+                srcset="img/doozer_small.webp"
+                media="(max-width: 480px)"
+              />
+              <source srcset="img/doozer.webp" />
+              <img
+                src="img/doozer_small.webp"
+                alt="Screenshot of the Doozer Simulator"
+                loading="lazy"
+              />
+            </picture>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</html>
