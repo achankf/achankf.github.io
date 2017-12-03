@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -15,8 +19,8 @@ img {
 
 div.date {
     font-family: sans-serif;
-    color: rgb(146, 146, 146);
-    font-size: 14px;
+    color: rgb(110, 110, 110);
+    font-size: 0.8em;
 }
 
 li.list-block {
@@ -54,8 +58,8 @@ div.title {
 
 #contents {
     float: left;
-    padding: 10px 10px;
-    margin: 50px 10px;
+    margin: 1%;
+    padding: 1%;
     height: 100%;
 }
 
@@ -69,8 +73,8 @@ div.title {
 
 div.page {
     min-height: 100vh;
-    padding-top: 50px;
-    padding-bottom: 200px;
+    margin: 1%;
+    padding: 50px 1% 1% 1%;
 }
 
 .menu-item.menu-button {
@@ -78,9 +82,9 @@ div.page {
     float: left;
     display: block;
     text-align: right;
-    padding: 15px 5px;
+    padding: 10px 10px 10px 5px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .menu-item {
@@ -95,7 +99,8 @@ div.page {
         display: block;
         text-align: center;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 25px;
+        padding: 16px;
     }
     #menu {
         float: left;
@@ -103,7 +108,6 @@ div.page {
         height: 100vh;
         width: 150px;
         text-align: center;
-        float: top;
         background-color: white;
         overflow: hidden;
         border-bottom: 0px;
@@ -112,10 +116,12 @@ div.page {
     }
     #contents {
         float: left;
-        margin: 0 0 0 150px;
+        margin: 1%;
+        padding: 1%;
     }
     div.page {
         min-height: 100vh;
-        padding-top: 0;
+        margin: 1% 1% 1% 150px;
+        padding: 1%;
     }
 }
