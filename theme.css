@@ -1,15 +1,12 @@
 * {
     box-sizing: border-box;
+    hyphens: auto;
 }
 
 body {
     padding: 0px;
     margin: 0px;
     background-color: gray;
-}
-
-article {
-    hyphens: auto;
 }
 
 img {
@@ -74,7 +71,7 @@ div.title {
 div.page {
     min-height: 100vh;
     margin: 1%;
-    padding: 50px 1% 1% 1%;
+    padding: 50px 1% 50vh 1%;
 }
 
 .menu-item.menu-button {
@@ -122,6 +119,6 @@ div.page {
     div.page {
         min-height: 100vh;
         margin: 1% 1% 1% 150px;
-        padding: 1%;
+        padding: 1% 1% 50vh 1%;
     }
 }
