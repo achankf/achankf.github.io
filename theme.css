@@ -43,9 +43,9 @@ div.title {
 }
 
 #menu {
-    float: top;
+    float: left;
     height: 50px;
-    width: 100vh;
+    width: 100%;
     position: fixed;
     background-color: white;
     overflow: hidden;
