@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
-    hyphens: auto;
 }
 
 body {
     padding: 0px;
     margin: 0px;
     background-color: gray;
+    font-family: 'Merriweather', serif;
+    hyphens: auto;
 }
 
 img {
@@ -15,7 +16,7 @@ img {
 }
 
 div.date {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: rgb(110, 110, 110);
     font-size: 0.8em;
 }
@@ -60,12 +61,14 @@ div.title {
     height: 100%;
 }
 
-#public-key {
+textarea#public-key {
     width: 90%;
     max-width: 700px;
     min-height: 100px;
     max-height: 100px;
-    resize: none
+    resize: none;
+    font-family: monospace;
+    hyphens: none;
 }
 
 div.page {
