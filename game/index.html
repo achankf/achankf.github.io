@@ -1,0 +1,38 @@
+<head>
+    <title>Game</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<div id="changePanel"></div>
+<div id="container">
+    <div id="mapContainer">
+        <canvas id="map"></canvas>
+        <div>
+            <div id="districtInfo"></div>
+            <div id="tileMapContainer"></div>
+        </div>
+    </div>
+    <div id="zoneInfo"></div>
+    <div id="playerContainer"></div>
+    <div id="groupContainer"></div>
+    <div id="container-right">
+        <div id="peopleContainer"></div>
+        <div id="companyContainer"></div>
+    </div>
+</div>
+</div>
+<div id="bottomContainer">
+    <input type="button" id="refreshMapButton" value="refresh map">
+    <input type="button" id="debugMountainfyButton" value="debug mountainfy">
+    <input type="number" id="mapOrder" value="6" min="6" max="10">
+    <input id="mapSeed" value="test">
+</div>
+<script src="./lib/system-production.js" type="text/javascript"></script>
+<script src="./lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="./lib/seedrandom.min.js" type="text/javascript"></script>
+<script src="./lib/immutable.min.js" type="text/javascript"></script>
+<script src="./lib/chai.js" type="text/javascript"></script>
+<script src="./js/main.js"></script>
+<script>
+    SystemJS.import('main')
+    SystemJS.import('trie')
+</script>
