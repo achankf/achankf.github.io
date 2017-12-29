@@ -1,0 +1,26 @@
+#map,
+#map tr,
+#map td {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid lightgray;
+}
+
+#map td {
+    width: 15px;
+    height: 15px;
+}
+
+#map td:hover {
+    background-color: black;
+}
+
+#map {
+    font-family: monospace;
+    line-height: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
