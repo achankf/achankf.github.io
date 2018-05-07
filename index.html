@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110471212-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110471212-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-110471212-1');
-    </script>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather%7COpen+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="theme.css">
-    <title>Alfred's Website</title>
-</head>
+    gtag('config', 'UA-110471212-1');
+</script>
+<link href="https://fonts.googleapis.com/css?family=Merriweather%7COpen+Sans" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="theme.css">
+<title>Alfred's Website</title>
 
 <div id="container">
     <ul id="menu">
@@ -39,10 +37,10 @@
         <div class="page" id="me">
             <h1>About Me</h1>
             <p>My name is Alfred Chan. I have a strong interest in software development. I gained professional programming skills through various Co-Op jobs while studying at the University of Waterloo for a Bachelor degree in Computer Science. Started in
-                September 2010 and completed in April 2016, I finally earned my diploma.
-                <div>
-                    This is my PGP public key (<a href="doc/alfred.asc" target="_blank">file</a>).
-                    <textarea id="public-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
+                September 2010 and completed in April 2016, I finally earned my diploma.</p>
+            <div>
+                This is my PGP public key (<a href="doc/alfred.asc" target="_blank">file</a>).
+                <textarea id="public-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBFoi+fcBEAC0k9WNgBnPMSGjGOWFjC77aqwjQLW3BXebks8tOdEa8mh3XoP7
 QiNx663jBjlX96iNIau7dbY51/Gay2++e1c54B13Wyleufrd3jSxfeCP7Q6LExox
@@ -93,7 +91,7 @@ EXsnagP9Ch9x8KRx5HBEvyMQjn1fh/NtvM27akCmWwedG5ki+xEAQI6dt7VjRE46
 BAT7Oc4QeG0aU8FPY294gNaa6KNx8IzcxA2q1qjtUoBT1cOEflt6OQ==
 =Jzo5
 -----END PGP PUBLIC KEY BLOCK-----</textarea>
-                </div>
+            </div>
         </div>
 
         <div class="page" id="resume">
@@ -104,12 +102,20 @@ BAT7Oc4QeG0aU8FPY294gNaa6KNx8IzcxA2q1qjtUoBT1cOEflt6OQ==
             <div><a href="https://www.linkedin.com/in/alfred-chan-kf" target="_blank">https://www.linkedin.com/in/alfred-chan-kf</a></div>
             <h3>Skills</h3>
             <ul>
-                <li>Hands-on experience with TypeScript, C#, Java, SQL, and client-server architecture</li>
+                <li>Hands-on experience with React, TypeScript, C#, Java, SQL, and client-server architecture</li>
                 <li>Highly interested in statically typed languages like Rust, Haskell, OCaml, and F#</li>
-                <li>Made a browser mini-game in Typescript
+            </ul>
+            <h3>Pet Projects</h3>
+
+            <ul>
+                <li><b>Space Industrialist</b> (mini-game)
                     <ul>
-                        <li>Actual game: <a href="https://achankf.github.io/space-industrialist/" target="blank">https://achankf.github.io/space-industrialist/</a></li>
-                        <li>Source codes: <a href="https://github.com/achankf/space-industrialist" target="blank">https://github.com/achankf/space-industrialist</a> </li>
+                        <li>This is a simple logistics game that is set in space. The player plays the role of the CEO of a galactic corporation. His/her goal is to maximize profit through constructing efficient production chains and through developing new
+                            markets on uninhabited planets.
+                        </li>
+                        <li>The game logic is written in Typescript, and the presentation layer is based on React and HTML Canvas.</li>
+                        <li>Link: <a href="https://achankf.github.io/space-industrialist/" target="blank">https://achankf.github.io/space-industrialist/</a></li>
+                        <li>Source: <a href="https://github.com/achankf/space-industrialist" target="blank">https://github.com/achankf/space-industrialist</a> </li>
                     </ul>
                 </li>
             </ul>
@@ -183,24 +189,24 @@ BAT7Oc4QeG0aU8FPY294gNaa6KNx8IzcxA2q1qjtUoBT1cOEflt6OQ==
             <ul>
                 <li><b>Space Industrialist (mini-game)</b>[<a href="./space-industrialist" target="_blank">Game</a> <a href="https://github.com/achankf/space-industrialist" target="_blank">Github</a>]
                     <p>This is a mini-game that is inspired by various good transport games, like the Port Royle and Patrician series. It has a overly simplistic logistics system that is roughly inspired by the Settlers 2. You have only 1 goal, as a space
-                        industrialist: to earn as much money as possible. May your action marks the start of a new industrial revolution, in space.
-                        <ul>
-                            <li>This game is written in Typescript.</li>
-                            <li>The presentation of the map is based on HTML Canvas.</li>
-                            <li>Most widgets are made with the help of the JQuery library.</li>
-                        </ul>
+                        industrialist: to earn as much money as possible. May your action marks the start of a new industrial revolution, in space.</p>
+                    <ul>
+                        <li>This game is written in Typescript.</li>
+                        <li>The presentation of the map is based on HTML Canvas.</li>
+                        <li>Most widgets are made with the help of the JQuery library.</li>
+                    </ul>
                 </li>
                 <li><b>Simple RPC server &amp; client</b> [<a href="https://github.com/achankf/CS454/tree/master/a3" target="_blank">Github</a>
                     <a href="https://github.com/achankf/CS454/blob/master/a3/a3.pdf" target="_blank">Description</a>
                     <a href="doc/rpc_doc.pdf" target="_blank">Document</a>]
-                    <p>This is a C++ project for a distribution system course. It allows developers to set up custom functions to their server, so that users can run these functions in the "cloud". It has 3 major parts.
-                        <ul>
-                            <li>The coordinator server acts as a gateway between servers and clients. Mainly, it provides clients namespace resolution of the other servers. It also acts as a worker server for computing purposes.</li>
-                            <li>The worker servers provide cloud computing capabilities to the clients. These servers internally store a namespace directory that gets updated when they contact the coordinator.</li>
-                            <li>The user uses the client application to request cloud computation and to get the results. The client stores a name directory, and it synchronizes its name directory with a worker server under successful contact, allowing local
-                                name lookup; hence lessening the loads of the coordinator.</li>
-                        </ul>
-                        <p><i>Note: This project needs to be compiled and run in a Linux environment.</i>
+                    <p>This is a C++ project for a distribution system course. It allows developers to set up custom functions to their server, so that users can run these functions in the "cloud". It has 3 major parts.</p>
+                    <ul>
+                        <li>The coordinator server acts as a gateway between servers and clients. Mainly, it provides clients namespace resolution of the other servers. It also acts as a worker server for computing purposes.</li>
+                        <li>The worker servers provide cloud computing capabilities to the clients. These servers internally store a namespace directory that gets updated when they contact the coordinator.</li>
+                        <li>The user uses the client application to request cloud computation and to get the results. The client stores a name directory, and it synchronizes its name directory with a worker server under successful contact, allowing local
+                            name lookup; hence lessening the loads of the coordinator.</li>
+                    </ul>
+                    <p><i>Note: This project needs to be compiled and run in a Linux environment.</i>
                 </li>
                 <li><b>Direct UI Manipulation Game: Doozer Simulator</b> [<a href="                    https://github.com/achankf/CS349/tree/master/A2/doozerSimulator" target="_blank">Github</a>
                     <a href="https://cs.uwaterloo.ca/~lank/CS349/W13/assignments/Assignment2.htm" target="_blank">Description</a>
