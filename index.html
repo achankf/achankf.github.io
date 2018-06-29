@@ -2,42 +2,170 @@
 <html lang="en">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110471212-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-110471212-1');
-</script>
 <link href="https://fonts.googleapis.com/css?family=Merriweather%7COpen+Sans" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="theme.css">
 <title>Alfred's Website</title>
 
-<div id="container">
-    <ul id="menu">
-        <li>
-            <div id="logo">
-                <picture>
-                    <source srcset="img/resume_link_small.png" media="(max-width: 480px)">
-                    <source srcset="img/resume_link.png">
-                    <img src="img/resume_link_small.png" alt="https://goo.gl/KISIGF">
-                </picture>
-            </div>
-        </li>
-        <li><a href="#me">Me</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#codes">Codes</a></li>
-    </ul>
-    <div id="contents">
-        <div class="page" id="me">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    li {
+        padding: 1% 0;
+    }
+    
+    ul {
+        padding: 0 5%;
+    }
+    
+    body {
+        padding: 0px;
+        margin: 0px;
+        background-color: gray;
+        font-family: 'Merriweather', serif;
+        hyphens: auto;
+        word-wrap: break-word;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    div.date {
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(110, 110, 110);
+        font-size: 0.8em;
+    }
+    
+    div.container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        overflow: auto;
+    }
+    
+    nav ul {
+        float: left;
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        background-color: white;
+        overflow: hidden;
+        border-bottom: 1px solid rgb(200, 200, 200);
+        border-right: 0px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul li {
+        font-weight: bold;
+        padding-right: 10px;
+        font-size: 15pt;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+    }
+    
+    div.contents {
+        display: flex;
+        flex-direction: column;
+        float: left;
+        margin: 0;
+        padding: 1%;
+        width: 100%;
+    }
+    
+    @supports (-ms-ime-align: auto) {
+        div.contents {
+            width: 90%;
+        }
+    }
+    
+    textarea#public-key {
+        width: 90%;
+        max-width: 700px;
+        height: 100px;
+        font-family: monospace;
+        hyphens: none;
+    }
+    
+    article {
+        min-height: 100vh;
+        margin: 0;
+        padding: 50px 1% 50vh 1%;
+    }
+    
+    @media screen and (min-width: 480px) {
+        nav ul {
+            float: left;
+            position: fixed;
+            height: 100vh;
+            width: 160px;
+            text-align: center;
+            background-color: white;
+            overflow: hidden;
+            border-bottom: 0px;
+            border-right: 1px solid;
+            border-color: rgb(200, 200, 200);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
+        nav ul li {
+            font-weight: bold;
+            padding-bottom: 15%;
+            font-size: 1.5em;
+        }
+        div.contents {
+            float: left;
+            margin: 0;
+            padding: 1%;
+        }
+        article {
+            min-height: 100vh;
+            margin: 1% 1% 1% 160px;
+            padding: 1% 1% 50vh 1%;
+        }
+        #logo {
+            width: 150px;
+            height: 150px;
+        }
+    }
+</style>
+
+<div class="container">
+    <nav>
+        <ul>
+            <li>
+                <div id="logo">
+                    <picture>
+                        <source srcset="img/resume_link_small.png" media="(max-width: 480px)">
+                        <source srcset="img/resume_link.png">
+                        <img src="img/resume_link_small.png" alt="https://goo.gl/KISIGF">
+                    </picture>
+                </div>
+            </li>
+            <li><a href="#me">Me</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#codes">Codes</a></li>
+        </ul>
+    </nav>
+    <div class="contents">
+        <article id="me">
             <h1>About Me</h1>
             <p>My name is Alfred Chan. I have a strong interest in software development. I gained professional programming skills through various Co-Op jobs while studying at the University of Waterloo for a Bachelor degree in Computer Science.</p>
-            <div>
+            <p>
                 This is my PGP public key (<a href="doc/alfred.asc" target="_blank">file</a>).
                 <textarea id="public-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -90,22 +218,23 @@ EXsnagP9Ch9x8KRx5HBEvyMQjn1fh/NtvM27akCmWwedG5ki+xEAQI6dt7VjRE46
 BAT7Oc4QeG0aU8FPY294gNaa6KNx8IzcxA2q1qjtUoBT1cOEflt6OQ==
 =Jzo5
 -----END PGP PUBLIC KEY BLOCK-----</textarea>
-            </div>
-        </div>
+            </p>
+        </article>
 
-        <div class="page" id="resume">
+        <article id="resume">
             <h1>Resume <span style="font-size:10pt">(<a href="https://goo.gl/KISIGF" target="_blank">print</a>)</span></h1>
             <div><b>Hello. I am Alfred Chan.</b></div>
             <div><a href="mailto:alfred8844@gmail.com">alfred8844@gmail.com</a> (email), 647-862-6046 (phone)</div>
             <div><a href="https://achankf.github.io/" target="_blank">https://achankf.github.io/</a></div>
             <div><a href="https://www.linkedin.com/in/alfred-chan-kf" target="_blank">https://www.linkedin.com/in/alfred-chan-kf</a></div>
+
             <h3>Skills</h3>
             <ul>
                 <li>Hands-on experience with React, TypeScript, C#, Java, SQL, and client-server architecture</li>
                 <li>Highly interested in statically typed languages like Rust, Haskell, OCaml, and F#</li>
             </ul>
-            <h3>Pet Projects</h3>
 
+            <h3>Pet Projects</h3>
             <ul>
                 <li><b>Space Industrialist</b> (mini-game)
                     <ul>
@@ -181,8 +310,8 @@ BAT7Oc4QeG0aU8FPY294gNaa6KNx8IzcxA2q1qjtUoBT1cOEflt6OQ==
                     </ul>
                 </li>
             </ul>
-        </div>
-        <div class="page" id="codes">
+        </article>
+        <article id="codes">
             <h1>Codes</h1>
             This is a list of projects that I have made.
             <ul>
@@ -210,7 +339,7 @@ BAT7Oc4QeG0aU8FPY294gNaa6KNx8IzcxA2q1qjtUoBT1cOEflt6OQ==
                 <li><b>Direct UI Manipulation Game: Doozer Simulator</b> [<a href="                    https://github.com/achankf/CS349/tree/master/A2/doozerSimulator" target="_blank">Github</a>
                     <a href="https://cs.uwaterloo.ca/~lank/CS349/W13/assignments/Assignment2.htm" target="_blank">Description</a>
                     <a href="https://github.com/achankf/CS349/blob/master/A2/README.txt" target="_blank">Readme</a>]
-                    <p>This is a small Java AWT game project where the player directly manipulates a bulldoozer, using the magnet on its tip, to secure as many candies that comes from the sky as possible. Think Tetris with drag-n-drop.
+                    <p>This is a small Java game project in which the player directly manipulates a bulldoozer, using the magnet on its tip, to secure as many candies that comes from the sky as possible. Think Tetris with drag-n-drop.
                     </p>
                     <picture>
                         <source srcset="img/doozer_small.png" media="(max-width: 480px)">
@@ -219,7 +348,7 @@ BAT7Oc4QeG0aU8FPY294gNaa6KNx8IzcxA2q1qjtUoBT1cOEflt6OQ==
                     </picture>
                 </li>
             </ul>
-        </div>
+        </article>
     </div>
 </div>
 
